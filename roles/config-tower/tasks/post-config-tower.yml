@@ -21,7 +21,7 @@
     tower_password: r3dh4t1!
     become_method: sudo
     become_username: cloud-user
-    ssh_key_data: "/root/.ssh/mykey.pem"
+    ssh_key_data: "{{ lookup('file', '/root/.ssh/openstack.pem') }}"
     username: cloud-user
 
 - name: Create Inventory
